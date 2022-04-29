@@ -37,7 +37,7 @@ function App() {
     <>
       <div className="container">
         <h3 className="text-danger font-weight-bolder border-bottom text-center">
-          Meni Jonim &#x1F496;{" "}
+          Single & Multiple File Upload Using MERN Stack{" "}
         </h3>
         <FileUploadScreen
           getsingle={() => getSingleFileslist()}
