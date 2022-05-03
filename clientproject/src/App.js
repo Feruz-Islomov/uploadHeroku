@@ -11,7 +11,7 @@ import {
 function App() {
   const [singleFiles, setSingleFiles] = useState([]);
   const [multipleFiles, setMultipleFiles] = useState([]);
-
+  const url = "http://localhost:8080/";
   const getSingleFileslist = async () => {
     try {
       const fileslist = await getSingleFiles();
@@ -37,7 +37,7 @@ function App() {
     <>
       <div className="container">
         <h3 className="text-danger font-weight-bolder border-bottom text-center">
-          Single & Multiple File Upload Using MERN Stack{" "}
+          Single & Multiple File Upload Using MERN Stack
         </h3>
         <FileUploadScreen
           getsingle={() => getSingleFileslist()}
@@ -53,7 +53,7 @@ function App() {
                 <div className="col-6" key={index}>
                   <div className="card mb-2 border-0 p-0">
                     <img
-                      src={`http://localhost:8080/${file.filePath}`}
+                      src={url + file.filePath}
                       height="200"
                       className="card-img-top img-responsive"
                       alt="img"
@@ -97,7 +97,7 @@ function App() {
                     <div className="col-6" key={index}>
                       <div className="card mb-2 border-0 p-0">
                         <img
-                          src={`http://localhost:8080/${file.filePath}`}
+                          src={url + file.filePath}
                           height="200"
                           className="card-img-top img-responsive"
                           alt="img"
